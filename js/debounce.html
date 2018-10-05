@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Debounce</title>
+  </head>
+  <body>
+    <div>
+      <label>normal</label>
+      <input type="text" id='n1' />
+    </div>
+    <div>
+      <label>debounce</label>
+      <input type="text" id='n2' />
+    </div>
+    <div>
+      <label>thorret</label>
+      <input type="text" id='n3' />
+    </div>
+
+    <script type="text/javascript">
+      const n1 = document.getElementById('n1');
+      n1.addEventListener('keyup',handler);
+      const n2 = document.getElementById('n2');
+      n2.addEventListener('keyup', debounce(handler,500));
+      const n3 = document.getElementById('n3');
+      n3.addEventListener('keyup', thorret(handler,500));
+
+      function debounce(fn, delay){
+        let t;
+        return function(e){
+          clearTimeout(t);
+          t = setTimeout(fn, delay,e);
+        }
+      }
+
+      function thorret(fn, delay){
+        let last;
+        return function(e){
+          let now =+ new Date();
+          if (last && now > last + delay) {
+            setTimeout(fn, delay, e);
+            last = now;
+          }else if(!last){
+            last = now;
+            fn(e);
+          }
+        }
+      }
+
+      function handler(e){
+        console.log(e.target.value);
+      }
+    </script>
+  </body>
+</html>
