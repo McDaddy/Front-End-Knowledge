@@ -1,0 +1,19 @@
+.d1{
+  width: 200px;
+  height: 200px;
+  border: 2px;
+  border-color: blue;
+  border-style: solid;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.d2{
+  width: 200px;
+  height: 200px;
+  border: 20px;
+  border-color: blue;
+  border-style: solid;
+  box-sizing: border-box;
+}

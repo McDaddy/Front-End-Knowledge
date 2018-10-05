@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>height</title>
+  </head>
+  <body>
+    <style media="screen">
+      .d1{
+        min-height: 100px;
+        width: 100px;
+        background-color: red;
+      }
+      .d2{
+        height: 50px;
+        width: 50px;
+        margin: auto 0;
+        background-color: black;
+      }
+    </style>
+    <div class="d1">
+      11111111111111111111111111111111111111111122222222222222222222222222222222
+    </div>
+    <script type="text/javascript">
+      var a = 0;
+      var b = 0;
+      var A = function(a){
+        A = function(a){
+          console.log(a+b++);
+        }
+        console.log(a++);
+      }
+      A(1);
+      A(2);
+
+
+      let array = ['a',['b','c'],'d',3,['e',6],0];
+      let flat = (array) =>{
+        Array.prototype.toString = function(){
+          return this.join(',');
+        }
+        return array.toString();
+
+      }
+      console.log(123, flat(array));
+
+      function test(){
+        console.log(a);
+        console.log(foo());
+        var a = 3;
+        function foo(){
+          return 2;
+        }
+      }
+      test();
+
+
+      var fullName = 'A';
+      var obj = {
+        fullName: 'B',
+        props: {
+          fullName: 'C',
+          getName: function(){
+            console.log(this.fullName);
+          }
+        }
+      }
+      obj.props.getName();
+      var xx = obj.props.getName;
+      xx();
+    </script>
+  </body>
+</html>

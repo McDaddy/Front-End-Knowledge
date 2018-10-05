@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sort</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let array = [6,1,2,7,9,30,4,5,10,8];
+      // let array = [1,2];
+
+      quickSort= (left,right, array)=>{
+        if (left >= right) {
+          return;
+        }
+
+
+        let tmp = array[left];
+        let i = left;
+        let j = right;
+        while (i !== j) {
+          while (array[j] >= tmp && j>i) {
+            j--;
+          }
+          while (array[i] <= tmp && j>i) {
+            i++;
+          }
+          if (j>i) {
+            let t = array[i];
+            array[i] = array[j];
+            array[j] = t;
+          }
+
+        }
+        array[left] = array[i];
+        array[i] = tmp;
+        quickSort(left,i-1, array);
+        quickSort(i+1, right,array);
+      }
+
+      quickSort(0,array.length-1, array);
+      console.log(array);
+    </script>
+  </body>
+</html>

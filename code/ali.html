@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Delete</title>
+  </head>
+  <body>
+    <ul class="list">
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+      <li>content ********  X</li>
+    </ul>
+
+    <script type="text/javascript">
+      class List {
+        constructor() {
+          this.root = Array.from(document.querySelectorAll('.list'));
+          let self = this;
+          this.root[0].forEach(
+            item =>{
+              item.addEventListener('click', self.onRemove.call(self,item), false);
+            }
+          )
+        }
+        onRemove (item) {
+          console.log(item);
+        }
+      }
+      new List();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Layout</title>
+    <style media="screen">
+        /* html * {
+            padding: 0px;
+            margin: 0px;
+        } */
+
+
+        /* section {
+            margin-top: 10px;
+        }
+
+        .s1>div {
+            min-height: 100px;
+        }
+
+        .s2>div {
+            position: absolute;
+            min-height: 100px;
+        }
+
+        .s2 {
+
+            position: relative;
+        }
+        .inline-block >div{
+          display: inline-block;
+          min-height: 100px;
+        }
+        .inline-block {
+          margin-top: 140px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <section class="s1">
+        <style media="screen">
+            .s1 .left {
+                float: left;
+                width: 300px;
+                background-color: red;
+            }
+
+            .s1 .center {
+
+                background-color: yellow;
+            }
+
+            .s1 .right {
+                float: right;
+                width: 300px;
+                background-color: blue;
+            }
+        </style>
+        <div class="left">
+        </div>
+        <div class="right">
+        </div>
+        <div class="center">
+            <h2>This is center</h2>
+        </div>
+    </section>
+    <section class="s2">
+        <style>
+            .s2 .left {
+                left: 0px;
+                width: 300px;
+                background-color: red;
+            }
+            .s2 .center {
+                left: 300px;
+                right: 300px;
+                background-color: yellow;
+            }
+            .s2 .right {
+                right: 0px;
+                width: 300px;
+                background-color: blue;
+            }
+        </style>
+        <div class="left"></div>
+        <div class="center">
+            <h2>This is Center</h2>
+        </div>
+        <div class="right"></div>
+    </section>
+
+    <section class="flexbox"></section>
+    <section class="table-display"></section>
+    <section class='grid-layout'></section>
+    <section class="inline-block">
+      <style>
+        .inline-block .left{
+          width: 300px;
+          background-color: red;
+        }
+        .inline-block .center{
+          width: calc(100% - 10px)；
+          background-color: yellow;
+        }
+        .inline-block .right{
+          width: 300px;
+          background-color: blue;
+        }
+      </style>
+      <div class="left"></div>
+      <div class="center">
+          <h2>This is Center</h2>
+      </div>
+      <div class="right"></div>
+    </section> -->
+
+    <sction class="center">
+      <style media="screen">
+        .center{
+          height: 200px;
+          width: 200px;
+          background-color: blue;
+          div{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            margin: 0 auto;
+          }
+        }
+      </style>
+      <div>
+
+      </div>
+    </sction>
+
+    <section class="s2">
+        <style>
+            .s2 .left {
+                left: 0px;
+                width: 300px;
+                background-color: red;
+            }
+            .s2 .center {
+                left: 300px;
+                right: 300px;
+                background-color: yellow;
+            }
+            .s2 .right {
+                right: 0px;
+                width: 300px;
+                background-color: blue;
+            }
+        </style>
+        <div class="left"></div>
+        <div class="center">
+            <h2>This is Center</h2>
+        </div>
+        <div class="right"></div>
+    </section>
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <script type="text/javascript">
+    "use strict";
+    let a = 10;
+    if (1) {
+      // console.log(a);
+      let a = 2;
+      console.log(a);
+    }
+
+    function f(){
+
+　　　　"use strict";
+      console.log(a);
+　　　　this.a = 1;
+      console.log(222,this.a);
+　　};
+
+　　let fn = new f();// 报错，this未定义
+console.log(fn.a,a,this.a);
+console.log(this);
+
+
+var o = {
+
+　　　　get v() { return 1; }
+
+　　};
+    console.log(o.v);
+// 　　o.v = 2; // 报错
+    </script>
+</body>
+
+</html>
